@@ -1,0 +1,55 @@
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "seller_id": {
+      "type": "string",
+      "description": "Member id of seller"
+    },
+    "seller_name": {
+      "type": "string"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "product_name": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "completed",
+        "cancelled",
+        "refunded"
+      ],
+      "default": "pending"
+    },
+    "method": {
+      "type": "string",
+      "description": "Payment method"
+    },
+    "note": {
+      "type": "string"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "seller_id",
+    "amount",
+    "status"
+  ]
+}
