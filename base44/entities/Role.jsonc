@@ -1,0 +1,40 @@
+{
+  "name": "Role",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Unique role key (e.g. developer, ceo, admin, seller, moderator)"
+    },
+    "label": {
+      "type": "string",
+      "description": "Human readable label"
+    },
+    "level": {
+      "type": "number",
+      "description": "Hierarchy level (lower = higher privilege). developer=0, ceo=1, admin=2, seller=3"
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Permission keys granted by this role"
+    },
+    "color": {
+      "type": "string",
+      "description": "Badge color (hex)"
+    },
+    "is_system": {
+      "type": "boolean",
+      "default": false,
+      "description": "System roles cannot be deleted"
+    }
+  },
+  "required": [
+    "key",
+    "label",
+    "level",
+    "permissions"
+  ]
+}
