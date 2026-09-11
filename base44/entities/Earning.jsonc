@@ -1,0 +1,43 @@
+{
+  "name": "Earning",
+  "type": "object",
+  "properties": {
+    "member_id": {
+      "type": "string",
+      "description": "Member id who earned"
+    },
+    "member_name": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number",
+      "default": 0
+    },
+    "source": {
+      "type": "string",
+      "description": "transaction, exchange, legitcheck, manual, etc."
+    },
+    "reference_id": {
+      "type": "string",
+      "description": "Related record id"
+    },
+    "note": {
+      "type": "string"
+    },
+    "added_by": {
+      "type": "string"
+    },
+    "added_by_name": {
+      "type": "string"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "member_id",
+    "amount",
+    "source"
+  ]
+}
