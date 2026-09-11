@@ -1,0 +1,47 @@
+{
+  "name": "WalletTransaction",
+  "type": "object",
+  "properties": {
+    "member_id": {
+      "type": "string",
+      "description": "Member id whose wallet changed"
+    },
+    "member_name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "credit",
+        "debit"
+      ],
+      "description": "credit = add, debit = remove"
+    },
+    "amount": {
+      "type": "number",
+      "default": 0
+    },
+    "previous_balance": {
+      "type": "number"
+    },
+    "new_balance": {
+      "type": "number"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "performed_by": {
+      "type": "string",
+      "description": "Member id of person performing the change"
+    },
+    "performed_by_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "member_id",
+    "type",
+    "amount",
+    "reason"
+  ]
+}
