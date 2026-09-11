@@ -1,0 +1,64 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number",
+      "default": 0
+    },
+    "category": {
+      "type": "string",
+      "description": "Category name"
+    },
+    "game_server": {
+      "type": "string",
+      "description": "Game/server e.g. Anarchia.gg"
+    },
+    "seller_id": {
+      "type": "string",
+      "description": "Member id of the seller"
+    },
+    "seller_name": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number",
+      "default": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "sold_out",
+        "archived"
+      ],
+      "default": "active"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "name",
+    "price",
+    "seller_id",
+    "status"
+  ]
+}
