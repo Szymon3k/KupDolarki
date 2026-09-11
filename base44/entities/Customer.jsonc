@@ -1,0 +1,45 @@
+{
+  "name": "Customer",
+  "type": "object",
+  "properties": {
+    "seller_id": {
+      "type": "string",
+      "description": "Member id of seller who served this customer"
+    },
+    "seller_name": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "Customer display name / nickname"
+    },
+    "contact": {
+      "type": "string",
+      "description": "Discord or other contact"
+    },
+    "total_spent": {
+      "type": "number",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "served",
+        "returning"
+      ],
+      "default": "new"
+    },
+    "note": {
+      "type": "string"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "seller_id",
+    "name"
+  ]
+}
