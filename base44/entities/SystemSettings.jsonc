@@ -1,0 +1,87 @@
+{
+  "name": "SystemSettings",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Settings key (use 'global' for the single global settings record)"
+    },
+    "panel_name": {
+      "type": "string",
+      "default": "KUPDOLARKI.PL"
+    },
+    "panel_display_name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "favicon_url": {
+      "type": "string"
+    },
+    "discord_url": {
+      "type": "string",
+      "default": "https://dc.kupdolarki.pl"
+    },
+    "footer_text": {
+      "type": "string",
+      "default": "Site Designed by realkampus"
+    },
+    "footer_link": {
+      "type": "string",
+      "default": "https://dc.kupdolarki.pl"
+    },
+    "theme": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "dark",
+            "light"
+          ],
+          "default": "dark"
+        },
+        "primary": {
+          "type": "string",
+          "default": "#7c3aed"
+        },
+        "accent": {
+          "type": "string",
+          "default": "#a855f7"
+        },
+        "background": {
+          "type": "string",
+          "default": "#0f0f14"
+        },
+        "sidebar": {
+          "type": "string",
+          "default": "#15151c"
+        },
+        "gradient": {
+          "type": "string",
+          "default": "linear-gradient(135deg,#7c3aed,#a855f7)"
+        }
+      }
+    },
+    "theme_locked": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, global theme is enforced and users cannot override"
+    },
+    "ceo_share_percent": {
+      "type": "number",
+      "default": 25
+    },
+    "allow_registration": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "key"
+  ]
+}
