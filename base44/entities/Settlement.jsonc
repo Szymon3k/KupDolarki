@@ -1,0 +1,65 @@
+{
+  "name": "Settlement",
+  "type": "object",
+  "properties": {
+    "member_id": {
+      "type": "string",
+      "description": "Seller member id"
+    },
+    "member_name": {
+      "type": "string"
+    },
+    "period_start": {
+      "type": "string",
+      "format": "date"
+    },
+    "period_end": {
+      "type": "string",
+      "format": "date"
+    },
+    "period_label": {
+      "type": "string"
+    },
+    "revenue": {
+      "type": "number",
+      "default": 0
+    },
+    "ceo_share_percent": {
+      "type": "number",
+      "default": 25
+    },
+    "ceo_amount": {
+      "type": "number",
+      "default": 0
+    },
+    "seller_amount": {
+      "type": "number",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "due",
+        "paid"
+      ],
+      "default": "due"
+    },
+    "paid_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "paid_by": {
+      "type": "string"
+    },
+    "paid_by_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "member_id",
+    "period_start",
+    "period_end",
+    "revenue",
+    "status"
+  ]
+}
