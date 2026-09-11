@@ -1,0 +1,127 @@
+{
+  "name": "Member",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Auth user id this member profile belongs to"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Login email (must end with @kd.pl)"
+    },
+    "display_name": {
+      "type": "string",
+      "description": "Display name shown in panel"
+    },
+    "avatar_url": {
+      "type": "string",
+      "description": "Avatar image url"
+    },
+    "custom_role": {
+      "type": "string",
+      "description": "Role key: developer, ceo, admin, seller, or custom role name"
+    },
+    "role_label": {
+      "type": "string",
+      "description": "Human readable role label"
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Permission keys granted to this member"
+    },
+    "account_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "blocked",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "wallet_balance": {
+      "type": "number",
+      "default": 0
+    },
+    "earnings_total": {
+      "type": "number",
+      "default": 0
+    },
+    "earnings_today": {
+      "type": "number",
+      "default": 0
+    },
+    "earnings_week": {
+      "type": "number",
+      "default": 0
+    },
+    "earnings_month": {
+      "type": "number",
+      "default": 0
+    },
+    "earnings_last_month": {
+      "type": "number",
+      "default": 0
+    },
+    "customers_count": {
+      "type": "number",
+      "default": 0
+    },
+    "transactions_count": {
+      "type": "number",
+      "default": 0
+    },
+    "exchanges_count": {
+      "type": "number",
+      "default": 0
+    },
+    "legitchecks_count": {
+      "type": "number",
+      "default": 0
+    },
+    "items_sold": {
+      "type": "number",
+      "default": 0
+    },
+    "last_login": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "theme_settings": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "dark",
+            "light"
+          ]
+        },
+        "primary": {
+          "type": "string"
+        },
+        "accent": {
+          "type": "string"
+        },
+        "sidebar": {
+          "type": "string"
+        }
+      }
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "user_id",
+    "email",
+    "custom_role",
+    "account_status"
+  ]
+}
